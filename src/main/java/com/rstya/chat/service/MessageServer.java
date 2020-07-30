@@ -34,8 +34,8 @@ public class MessageServer {
 
 	@OnClose
 	public void onClose(Session session) {
-		this.session = session;
 		System.out.println("客户端(" + session.getBasicRemote() + ")已断开连接");
+		this.session = null;
 	}
 
 	@OnMessage
