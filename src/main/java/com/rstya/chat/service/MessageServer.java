@@ -33,8 +33,8 @@ public class MessageServer {
 	}
 
 	@OnClose
-	public void onClose(Session session) {
-		System.out.println("客户端(" + session.getBasicRemote() + ")已断开连接");
+	public void onClose(Session session, @PathParam("id") String userId) {
+		System.out.println("用户" + userId + "已断开连接");
 		this.session = null;
 	}
 
