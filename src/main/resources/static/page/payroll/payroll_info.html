@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>工资信息</title>
+
+    <style type="text/css">
+        .form-group label span.required {
+            color: red;
+            display: inline-block;
+            line-height: 34px;
+            padding: 0px 5px;
+        }
+
+        .user_Info {
+            height: 550px;
+            overflow: scroll;
+        }
+
+        .Info_content {
+            background: #fff !important;
+            margin: 0px auto;
+        }
+    </style>
+    <script src="/libs/jquery/jquery.3.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var contextPath = "${basePath}";
+        var id = "${id}";
+    </script>
+    <script src="/js/payroll/salaryEdit.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="user_Info change">
+    <div class="Info_content">
+        <div class="INfo_innercontent">
+            <form class="form-inline user_form" method="post">
+                <input id="id" name="id" type="hidden" value="${id}">
+                <div class="form-group">
+                    <label>员工姓名:</label>
+                    <input class="easyui-textbox" data-options="editable:false" id="employeeName" name="employeeName"
+                           prompt="员工姓名">
+                </div>
+                <div class="form-group">
+                    <label>员工工号:</label>
+                    <input class="easyui-textbox" data-options="editable:false" id="employeeCode" name="employeeCode"
+                           prompt="员工工号">
+                </div>
+                <div class="form-group">
+                    <label>所属中心:</label>
+                    <input class="easyui-textbox" data-options="editable:false" id="centerName" name="centerName"
+                           prompt="所属中心">
+                </div>
+                <div class="form-group">
+                    <label>所属部门:</label>
+                    <input class="easyui-textbox" data-options="editable:false" id="departmentName"
+                           name="departmentName" prompt="所属部门">
+                </div>
+                <div class="form-group">
+                    <label>计发年月:</label>
+                    <input class="easyui-textbox" data-options="editable:false" id="payYearmonth" name="payYearmonth"
+                           prompt="计发年月：格式[201801]">
+                </div>
+                <div class="form-group">
+                    <label>标准工资:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="salaryStandard"
+                           name="salaryStandard" prompt="标准工资">
+                </div>
+                <div class="form-group">
+                    <label>职级职等津贴:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="positionRankAllowance"
+                           name="positionRankAllowance" prompt="职级职等津贴"/>
+                </div>
+                <div class="form-group">
+                    <label>考核奖:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="appraiseReward"
+                           name="appraiseReward" prompt="考核奖"/>
+                </div>
+                <div class="form-group">
+                    <label>职位补贴:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="positionAllowance"
+                           name="positionAllowance" prompt="职位补贴"/>
+                </div>
+                <div class="form-group">
+                    <label>岗贴:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="postAllowance"
+                           name="postAllowance" prompt="岗贴"/>
+                </div>
+                <div class="form-group">
+                    <label>一般加班:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="overtimeWeekdayPay"
+                           name="overtimeWeekdayPay" prompt="一般加班"/>
+                </div>
+                <div class="form-group">
+                    <label>节假日加班:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="overtimeHolidayPay"
+                           name="overtimeHolidayPay" prompt="节假日加班"/>
+                </div>
+                <div class="form-group">
+                    <label>中夜班津贴:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="dayNightAllowance"
+                           name="dayNightAllowance" prompt="中夜班津贴"/>
+                </div>
+                <div class="form-group">
+                    <label>值班费:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="dutyAllowance"
+                           name="dutyAllowance" prompt="值班费"/>
+                </div>
+                <div class="form-group">
+                    <label>餐补:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="messAllowance"
+                           name="messAllowance" prompt="餐补"/>
+                </div>
+                <div class="form-group">
+                    <label>过江补贴:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="trafficAllowance"
+                           name="trafficAllowance" prompt="过江补贴"/>
+                </div>
+                <div class="form-group">
+                    <label>补发工资:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="supplementSalary"
+                           name="supplementSalary" prompt="补发工资"/>
+                </div>
+                <div class="form-group">
+                    <label>病事假:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="personalLeaveDeduction"
+                           name="personalLeaveDeduction" prompt="病事假"/>
+                </div>
+                <div class="form-group">
+                    <label>应发工资:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="totalPay" name="totalPay"
+                           prompt="应发工资"/>
+                </div>
+                <div class="form-group">
+                    <label>代扣税:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="individualIncomeTax"
+                           name="individualIncomeTax" prompt="代扣税"/>
+                </div>
+                <div class="form-group">
+                    <label>扣款:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="otherDeduction"
+                           name="otherDeduction" prompt="扣款"/>
+                </div>
+                <div class="form-group">
+                    <label>工会费:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="unionFund" name="unionFund"
+                           prompt="工会费"/>
+                </div>
+                <div class="form-group">
+                    <label>失保金:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="unemploymentInsurance"
+                           name="unemploymentInsurance" prompt="失保金"/>
+                </div>
+                <div class="form-group">
+                    <label>养老金:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="endowmentInsurance"
+                           name="endowmentInsurance" prompt="养老金"/>
+                </div>
+                <div class="form-group">
+                    <label>医保金:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="medicalInsurance"
+                           name="medicalInsurance" prompt="医保金"/>
+                </div>
+                <div class="form-group">
+                    <label>公积金:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="housingFund" name="housingFund"
+                           prompt="公积金"/>
+                </div>
+                <div class="form-group">
+                    <label>实发工资:</label>
+                    <input class="easyui-numberbox" data-options="editable:false" id="netPay" name="netPay"
+                           prompt="实发工资"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

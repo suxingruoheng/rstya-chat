@@ -1,0 +1,37 @@
+div.h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-end: 0;
+    -webkit-margin-start: 0;
+}
+
+.welcome {
+    display: block;
+    font-size: 48px;
+}
+
+.companyName {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.system-name {
+    color: deepskyblue;
+    display: inline-block;
+    font-size: 40px;
+    margin: 20px 0 0 40px;
+}
+
+.useMethod {
+    font-size: 16px;
+    margin: 80px 0 0 40px;
+}
+
+.tip {
+    color: orange;
+    font-size: 16px;
+    margin: 40px 0 0 40px;
+}

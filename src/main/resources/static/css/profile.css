@@ -1,0 +1,61 @@
+body {
+    overflow-y: auto;
+}
+
+.profile {
+    background-color: #f5f5f5;;
+    border: 1px solid #eee;
+    box-shadow: gray;
+    width: 400px;
+}
+
+.profile .tab {
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.profile .tab:first-child {
+    background-color: rgb(16, 142, 233);
+    margin-top: 0;
+    padding: 20px 0 20px 100px;
+}
+
+.profile .tab:last-child {
+    margin-bottom: 0;
+}
+
+.profile .tab h1 {
+    color: #666;
+    font-size: 14px;
+    padding: 0 20px 0 26px;
+    width: 120px;
+}
+
+.profile .tab ul li {
+    border: 1px solid #eee;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+.profile .tab ul li label {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+    width: 120px;
+}
+
+.profile .tab ul li div.value {
+    display: inline;
+}
+
+.profile .tab ul li div.value span {
+    color: grey;
+    font-size: 14px;
+}
+
+.profile .tab.remarkInfo ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

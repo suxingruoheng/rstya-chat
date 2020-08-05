@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>导入工资记录</title>
+    <script src="/libs/jquery/jquery.3.4.1.min.js" type="text/javascript"></script>
+    <script src="/libs/ocupload/jquery.ocupload-1.1.2.js" type="text/javascript"></script>
+    <script src="/js/payroll/importSalary.js" type="text/javascript"></script>
+    <style type="text/css">
+        .Info_content .INfo_innercontent .user_form .form-group label span.required {
+            color: red;
+            display: inline-block;
+            line-height: 34px;
+            padding: 0 5px;
+        }
+
+        .buttonstyle {
+            background-color: rgb(16, 142, 233);
+            border: 1px solid rgb(16, 142, 233);
+            color: #fff;
+            height: 26px;
+            line-height: 26px;
+            width: 69px;
+        }
+
+        .Info_content .INfo_innercontent .user_form .form-group {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            margin: 5px 100px;
+        }
+
+        .Info_content .INfo_innercontent .user_form .form-group div {
+            display: inline-block;
+            height: 28px;
+            line-height: 28px;
+            overflow: hidden;
+            position: absolute !important;
+            width: 71px;
+        }
+
+        .Info_content .INfo_innercontent .user_form .form-group .textbox {
+            border-radius: 0;
+            height: 26px !important;
+            line-height: 26px !important;
+            padding: 0 !important;
+            width: 100px !important;
+        }
+
+        .Info_content .INfo_innercontent .user_form .form-group img {
+            height: 14px;
+            width: 7px;
+        }
+
+        .Info_content .INfo_innercontent .user_form .form-group label {
+            min-width: 80px !important;
+        }
+
+        #fileSelected {
+            margin-left: 75px;
+        }
+
+        .Info_content {
+            background: #fff !important;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="user_Info change">
+    <div class="Info_content">
+        <div class="INfo_innercontent">
+            <form action="/itemSalaryFile/upload" class="form-inline user_form" enctype="multipart/form-data"
+                  method="post">
+                <input id="id" name="id" type="hidden" value="${id}">
+                <div class="form-group">
+                    <label>Excel文件：</label>
+                    <button class="buttonstyle" id="uploadExcel">
+                        <i>&nbsp;选择文件&nbsp;</i>
+                    </button>
+                    <span id="fileSelected">未选择任何文件</span>
+                </div>
+                <div class="form-group">
+                    <label>模板文件：</label>
+                    <a href="/templates/docs/salary_template.xlsx" style="color: #30b5ff">下载模板</a>
+                    &nbsp;
+                    <span>请下载模板文件，填入数据后导入!</span>
+                </div>
+                <div class="form-group">
+                    <label>导入说明：</label>
+                    <span style="color: red">请确保当前计发年月内员工工号不重复，否则会导致导入失败！</span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

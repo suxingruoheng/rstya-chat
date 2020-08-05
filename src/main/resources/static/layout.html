@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <title>Payroll Management System</title>
+    <link href="/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/images/favicon.svg" rel="icon" sizes="any">
+    <link href="/css/layout.css" rel="stylesheet">
+    <script src="/libs/jquery/jquery.3.4.1.min.js" type="text/javascript"></script>
+    <script src="/js/common/Utils.js" type="text/javascript"></script>
+    <script src="/js/common/API.js" type="text/javascript"></script>
+    <script src="/js/common/layout.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="top-bar">
+    <div class="left-top">
+        <img alt="" class="logo" src="/images/favicon.svg">
+        <span class="system-name"><b>P</b>ayroll <b>M</b>anagement <b>S</b>ystem</span>
+    </div>
+    <div class="right-top">
+        <button class="exit-button" onclick="logout();">退出</button>
+    </div>
+</div>
+<div class="center-panel">
+    <!--  左侧导航 -->
+    <div class="application-sidebar" title="导航菜单">
+        <div class="menu-section">
+            <!--  导航内容 -->
+            <ul class="menu-tree">
+                <li class="level1">
+                    <p class="level1-name" id="1" title="薪资管理">薪资管理</p>
+                    <ul class="submenu">
+                        <li class="level2" id="3" title="我的薪资"><span>我的薪资</span></li>
+                        <li class="level2" id="4" title="薪资统计"><span>薪资统计</span></li>
+                        <li class="level2" id="5" title="薪资管理"><span>薪资管理</span></li>
+                    </ul>
+                </li>
+                <li class="level1">
+                    <p class="level1-name" id="2" title="系统设置">系统设置</p>
+                    <ul class="submenu">
+                        <li class="level2" id="6" title="组织架构"><span>组织架构</span></li>
+                        <li class="level2" id="7" title="角色管理"><span>角色管理</span></li>
+                        <li class="level2" id="8" title="用户管理"><span>用户管理</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--  右侧主体窗口 -->
+    <div class="application-mainframe">
+        <div class="frame-top"></div>
+        <div class="frame-section" id="tabs">
+            <div class="tab-title active" title="首页">
+                <iframe allowtransparency="true" src="/page/home-page.html"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

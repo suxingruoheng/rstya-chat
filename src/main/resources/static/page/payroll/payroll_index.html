@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>工资管理</title>
+
+    <script src="/libs/jquery/jquery.3.4.1.min.js" type="text/javascript"></script>
+    <script src="/js/payroll/salaryList.js" type="text/javascript"></script>
+
+</head>
+<body class="easyui-layout" data-options="fit:true,border:false">
+<div id="toolbar">
+    <table>
+        <tr>
+            <td>
+                <form id="searchForm">
+                    <table>
+                        <tr>
+                            <td>
+                                <label>员工名称</label>
+                                <input class="easyui-textbox" data-options="width:100" id="employeeName"
+                                       name="employeeName"/></td>
+                            <td>
+                                <label>员工工号</label>
+                                <input class="easyui-textbox" data-options="width:100" id="employeeCode"
+                                       name="employeeCode"/></td>
+                            <td>
+                                <label>计发年月</label>
+                                <input class="easyui-combobox" data-options="editable:false" id="payYear"
+                                       name="payYear"/>
+                                <input class="easyui-combobox" data-options="editable:false" id="payMonth"
+                                       name="payMonth"/></td>
+                            <td>
+                                <a class="easyui-linkbutton" href="javascript:void(0);"
+                                   onclick="grid.datagrid('load',sy.serializeObject($('#searchForm')));">搜索</a>
+                                <a class="easyui-linkbutton" href="javascript:void(0);"
+                                   onclick="$('#searchForm').form('clear');grid.datagrid('load',{});">重置</a></td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+<div data-options="region:'center',fit:true,border:false">
+    <table data-options="fit:true,border:false" id="grid"></table>
+</div>
+
+</body>
+<style>
+    .datagrid-header td, .datagrid-body td, .datagrid-footer td {
+        border-width: 0 0 1px 1px;
+    }
+
+    #searchForm input.textbox-text.validatebox-text.textbox-prompt {
+        width: 120px !important;
+    }
+
+    #searchForm input.textbox-text.validatebox-text {
+        width: 120px !important;
+    }
+
+    .textbox {
+        width: 120px !important;
+    }
+
+    #searchForm .combo input.textbox-text.validatebox-text.textbox-prompt {
+        width: 70px !important;
+    }
+
+    #searchForm .combo input.textbox-text.validatebox-text {
+        width: 70px !important;
+    }
+
+    .textbox.combo {
+        width: 70px !important;
+    }
+</style>
+<script type="text/javascript">
+    $(function () {
+        var b = $('.buttons').html();
+        $('#toolbar').after(b);
+    })
+
+</script>
+</html>
+
