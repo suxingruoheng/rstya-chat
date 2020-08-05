@@ -40,6 +40,7 @@ public class SystemConfiguration implements WebMvcConfigurer {
 
 		List<String> excludePathPatterns = new ArrayList<String>();
 		excludePathPatterns.add("/");
+		excludePathPatterns.add("/message/**");
 		excludePathPatterns.add("/static/**");
 		excludePathPatterns.add("/favicon**");
 		excludePathPatterns.add("/index.html");
