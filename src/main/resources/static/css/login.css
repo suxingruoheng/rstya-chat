@@ -1,0 +1,391 @@
+@charset "utf-8";
+
+html, body {
+    height: 100%;
+    margin: 0 !important;
+    min-width: 400px;
+    overflow-x: hidden;
+    padding: 0 !important;
+}
+
+body {
+    background: #454545;
+    color: #676a6c;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+h1 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 32px;
+    font-weight: normal;
+    height: 35px;
+    line-height: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.login-container {
+    background: rgba(100, 100, 100, .3);
+    margin: 0 auto;
+    width: 375px;
+}
+
+.title {
+    text-align: center;
+}
+
+.login-container .title h1 {
+    margin: 0 !important;
+    padding: 0;
+    text-align: center;
+}
+
+.login-container .title h1 img {
+    display: none;
+}
+
+.login-container .title h1 span {
+    color: rgba(255, 255, 255, 0.9) !important;
+    display: none;
+}
+
+.login-layout .login-box.visible {
+    margin: 0 !important;
+    position: relative;
+    -moz-transform: scale(1, 1) translate(0);
+    -ms-transform: scale(1, 1) translate(0);
+    -o-transform: scale(1, 1) translate(0);
+    -webkit-transform: scale(1, 1) translate(0);
+    transform: scale(1, 1) translate(0);
+    -moz-transition: -moz-transform .3s ease;
+    -o-transition: -o-transform .2s ease;
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    visibility: visible;
+    z-index: auto;
+}
+
+.login-layout .login-box {
+    border-bottom: none;
+    border-width: 0;
+    box-shadow: none;
+    padding: 6px;
+    position: fixed;
+    -moz-transform: scale(0, 1) translate(-150px);
+    -ms-transform: scale(0, 1) translate(-150px);
+    -o-transform: scale(0, 1) translate(-150px);
+    -webkit-transform: scale(0, 1) translate(-150px);
+    transform: scale(0, 1) translate(-150px);
+    visibility: hidden;
+    z-index: -5;
+}
+
+.widget-main {
+    border: none !important;
+    padding: 0 36px 36px;
+}
+
+.fieldset {
+    border: none;
+    display: block;
+    margin-inline-end: 2px;
+    margin-inline-start: 2px;
+    min-inline-size: min-content;
+    padding-block-end: 0.625em;
+    padding-block-start: 0.35em;
+    padding-inline-end: 0.75em;
+    padding-inline-start: 0.75em;
+}
+
+.login-box label {
+    margin-bottom: 11px;
+    padding: 8px 10px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mozilla Firefox 19+ */
+input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mozilla Firefox 4 to 18 */
+input:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.block {
+    display: block;
+}
+
+.input-span {
+    position: relative;
+}
+
+.input-span input {
+    color: rgba(240, 240, 240, .95);
+    font-family: inherit;
+    font-size: 18px;
+    padding-left: 30px;
+    padding-right: 42px;
+}
+
+.login-button {
+    background: rgb(66, 155, 235);
+    background: rgba(0, 0, 0, .1);
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.38;
+    margin: 0;
+    padding: 9px 9px;
+    position: relative;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    -o-transition: background-color .15s, border-color .15s, opacity .15s;
+    -webkit-transition: background-color .15s, border-color .15s, opacity .15s;
+    transition: background-color .15s, border-color .15s, opacity .15s;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.login-button:hover {
+    background: rgb(66, 155, 235);
+}
+
+.login-button:focus {
+    background-color: #466992;
+}
+
+.form-control {
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.6);
+    border-radius: 1px;
+    color: inherit;
+    display: inline-block !important;
+    font-size: 14px;
+    padding: 6px 12px;
+    position: relative;
+    -webkit-transition: border-color .15s ease-in-out 0s, box-shadow .15s ease-in-out 0s;
+    transition: border-color .15s ease-in-out 0s, box-shadow .15s ease-in-out 0s;
+    width: 69%;
+}
+
+.input-span img {
+    height: 18px;
+    left: 6px;
+    margin-top: -10px;
+    position: absolute;
+    top: 50%;
+    width: 18px;
+}
+
+label.inline a {
+    color: rgb(94, 176, 250);
+    float: right;
+}
+
+.main-container {
+    background: url("../images/login-bg.jpg");
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+.main-content {
+    margin-top: -160px;
+    position: absolute;
+    right: 18%;
+    top: 50%;
+    width: 375px;
+}
+
+.main-content .row {
+    -moz-box-shadow: #666 0 0 10px;
+    -webkit-box-shadow: #666 0 0 10px;
+    box-shadow: #666 0 0 10px;
+    filter: alpha(Opacity=95);
+    -moz-opacity: .95;
+    opacity: .95;
+}
+
+.copyright {
+    bottom: 15px;
+    left: 50%;
+    margin-left: -50%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.copyright span {
+    color: #eeeeee;
+    display: inline;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0 10px;
+}
+
+.copyright span em {
+    font-style: normal;
+    margin: 0 10px;
+}
+
+.float-title {
+    margin-left: 100px;
+    margin-top: -160px;
+    position: absolute;
+    top: 50%;
+}
+
+.float-title .logo {
+    padding: 0 0 20px 0;
+    text-align: center;
+}
+
+.signature {
+    max-height: 492px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.signature .signature-name {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 0 8px;
+}
+
+.signature .signature-content {
+    font-size: 15px;
+    line-height: 21px;
+    margin: 8px;
+}
+
+.signature-text {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.signature .line {
+    background: rgba(255, 255, 255, 0.7);
+    height: 1px;
+    line-height: 1px;
+    margin: 10px 0;
+    max-width: 400px;
+}
+
+@media (max-width: 500px) {
+
+    .main-content {
+        height: 51% !important;
+        margin-top: -37% !important;
+        right: 5% !important;
+        width: 58% !important;
+    }
+
+    .main-content .row {
+        left: 50%;
+        margin-left: -45%;
+        width: 100%;
+    }
+
+    .main-content .row .login-container {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .login-container .title h1 {
+        padding: 0 !important;
+    }
+
+    .login-container .title h1 img {
+        display: inline-block !important;
+        margin-left: 0 !important;
+        position: inherit !important;
+        vertical-align: middle !important;
+        width: 22px !important;
+    }
+
+    .widget-main {
+        padding: 0;
+    }
+
+    .login-layout label {
+        margin-bottom: 0 !important;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .copyright {
+        left: 0;
+        margin-left: 0;
+        padding: 0 3% !important;
+        text-align: center;
+    }
+
+    .copyright span em.cp span {
+        display: none;
+    }
+
+    .copyright .support {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .copyright {
+        text-align: left;
+    }
+
+}
+
+/*屏幕宽度小于950px时，隐藏左边悬浮的签名元素*/
+@media (max-width: 950px) {
+    .float-title {
+        display: none;
+    }
+
+    .login-container .title h1 {
+        padding: 22px 0;
+    }
+
+    .login-container .title h1 span {
+        display: inline-block;
+        line-height: 45px;
+    }
+
+    .login-container .title h1 img {
+        display: inline-block;
+        height: 45px;
+        line-height: 45px;
+        margin-left: -50px;
+        position: absolute;
+        width: 45px;
+    }
+
+    .login-button:hover {
+        background: rgba(255, 90, 0, 0.85);
+    }
+}

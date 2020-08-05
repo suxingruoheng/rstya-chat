@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background: #2b2b2b;
+    border-bottom: 1px solid #e2e2e2;
+    height: 49px;
+    line-height: 49px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.top-bar .left-top {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.top-bar .left-top img.logo {
+    height: 40px;
+    left: 20px;
+    margin-top: 5px;
+    position: absolute;
+    width: 40px;
+}
+
+.top-bar .left-top .system-name {
+    color: snow;
+    margin-left: 60px;
+}
+
+.top-bar .left-top .system-name b {
+    color: #00bfff;
+    font-size: 18px;
+    padding-right: 1px;
+}
+
+.top-bar .right-top {
+    display: inline-block;
+    float: right;
+    margin: 0 20px;
+}
+
+.top-bar .right-top .exit-button {
+    background: #1E9FFF;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    width: 80px;
+}
+
+.center-panel {
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+
+.center-panel .application-sidebar {
+    background: #2b2b2b;
+    display: inline-block;
+    float: left;
+    height: 100%;
+    line-height: 100%;
+    overflow: auto;
+    width: 250px;
+}
+
+.center-panel .application-mainframe {
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    margin-left: 250px;
+    position: absolute;
+    right: 0;
+}
+
+.center-panel .application-mainframe #tabs {
+    height: 100%;
+}
+
+.center-panel .tab-title {
+    height: 100%;
+    overflow: auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    color: #808080;
+    list-style: none;
+}
+
+ul.menu-tree {
+    background: #454545;
+    padding: 20px 0 20px 0;
+}
+
+li.level1 .level1-name {
+    color: #e1e1e1;
+    margin: 0;
+    padding: 10px;
+}
+
+li.level1 .level1-name:hover {
+    background: #0d8ddb;
+    color: white;
+    cursor: pointer;
+}
+
+li.level1 {
+    background: #454545;
+    padding: 2px 20px;
+}
+
+li.level2 {
+    background: #666666;
+    border-bottom: 1px solid #454545;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+li.level2:hover {
+    background: #0d8ddb;
+    border-bottom: 1px solid #0d8ddb;
+    cursor: pointer;
+}
+
+li.level2:hover span {
+    color: white;
+}
+
+li.level2 span {
+    color: #b2b2b2;
+    padding: 10px;
+}
+
+.tab-title {
+    display: none;
+}
+
+.tab-title iframe {
+    border: 0;
+    height: 99%;
+    width: 100%;
+}
+
+.tab-title.active {
+    display: block;
+}
